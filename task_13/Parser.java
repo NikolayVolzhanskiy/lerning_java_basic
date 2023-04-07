@@ -7,7 +7,6 @@ public class Parser {
     static String map = "abcdefghijklmnopqrstuvwxyz";
     static String[] parse(String str){
         String[] result = new String[0];
-        boolean check = false;
         for (String word : str.split(" ")){
             StringBuilder temp_word = new StringBuilder();
             for (char let : word.toCharArray()){
