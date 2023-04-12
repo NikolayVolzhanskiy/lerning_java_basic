@@ -11,7 +11,7 @@ public class Words {
             int n = 0;
             char[] word_arr = word.toCharArray();
             for(int i = 0; i < word_arr.length; i++){
-                for (int j = i+1; j<word_arr.length; j++){
+                for (int j = i+1; j < word_arr.length; j++){
                     if(word_arr[i] == word_arr[j]) n++;
                 }
             }
