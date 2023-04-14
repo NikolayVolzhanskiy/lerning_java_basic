@@ -6,9 +6,9 @@ public class Words {
 
     static String find(String[] words){
         String unique_chars = "";
-        int k = -1;
-        for(String word : words){
-            char[] word_arr = word.toCharArray();
+        int index_word = 0;
+        for(int k = 0; k < words.length; k++){
+            char[] word_arr = words[k].toCharArray();
             StringBuilder temp = new StringBuilder(String.valueOf(word_arr[0]));
             for(int i = 1; i < word_arr.length; i++){
                 boolean unique = true;
@@ -21,11 +21,11 @@ public class Words {
                 if(unique) temp.append(word_arr[i]);
             }
             if(temp.length() > unique_chars.length()) {
-                k++;
+                index_word = k;
                 unique_chars = temp.toString();
             }
         }
-        return words[k];
+        return words[index_word];
     }
 
     public static void main(String[] args) {
